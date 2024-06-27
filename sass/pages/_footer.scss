@@ -1,0 +1,62 @@
+footer {
+  background-color: $bg-color;
+  .footer_content {
+    padding-top: 50px;
+    .footer_item_1 {
+      color: white;
+      a {
+        color: white;
+        transition: all 0.3s;
+        &:hover {
+          color: $main-color;
+        }
+      }
+      i {
+        color: $main-color;
+        font-size: 48px;
+        margin-right: 10px;
+        margin-top: 20px;
+      }
+      span {
+        font-size: 24px;
+        font-weight: 500;
+      }
+      p {
+        font-size: 14px;
+        margin-top: 20px;
+      }
+      .footer_social {
+        i {
+          font-size: 18px;
+          border-radius: 100%;
+          line-height: 40px;
+          width: 40px;
+          height: 40px;
+          text-align: center;
+          color: white;
+          transition: all 0.3s;
+          cursor: pointer;
+          &.fa-facebook-f {
+            background-color: #3c5b9b;
+          }
+          &.fa-twitter {
+            background-color: #1aaed9;
+          }
+          &.fa-pinterest {
+            background-color: #3c5b9b;
+          }
+          &.fa-google-plus-g {
+            background-color: #eb3e32;
+          }
+          &.fa-instagram {
+            background-color: #8a7763;
+          }
+          &:hover {
+            background-color: $second-color;
+            color: $main-color;
+          }
+        }
+      }
+    }
+  }
+}

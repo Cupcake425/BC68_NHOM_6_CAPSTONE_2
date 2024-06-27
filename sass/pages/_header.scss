@@ -1,0 +1,47 @@
+header {
+  background-color: $bg-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all 0.5s;
+  z-index: 999;
+  .header_content {
+    display: flex;
+    justify-content: space-between;
+    transition: 0.5s;
+    .header_logo {
+      position: relative;
+      padding: 25px 0;
+    }
+    .header_nav {
+      ul {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 0;
+        li {
+          position: relative;
+          margin-left: 25px;
+
+          a {
+            position: relative;
+            font-weight: bold;
+            color: $second-color;
+            transition: all 0.3s;
+            &:hover {
+              color: $main-color;
+            }
+          }
+          .active {
+            color: $main-color !important;
+          }
+        }
+      }
+    }
+  }
+  &.sticky {
+    background-color: $bg-color;
+  }
+}
