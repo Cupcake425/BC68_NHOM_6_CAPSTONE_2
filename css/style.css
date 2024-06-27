@@ -12,13 +12,11 @@ a {
 ul {
   list-style: none;
   margin-bottom: 0 !important;
+  padding-left: 0 !important;
 }
 
 header {
   background-color: #26292e;
-  position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
   transition: all 0.5s;
   z-index: 998;
@@ -37,7 +35,7 @@ header .header_content .header_nav nav .sidebar {
   top: 0;
   right: 0;
   height: 100vh;
-  width: 30%;
+  width: 40%;
   z-index: 999;
   background-color: rgba(38, 41, 46, 0.2549019608);
   -webkit-backdrop-filter: blur(10px);
@@ -45,11 +43,11 @@ header .header_content .header_nav nav .sidebar {
   box-shadow: -10px 0 10px rbga(0, 0, 0, 0.1);
   display: none;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
 }
 header .header_content .header_nav nav .sidebar li {
-  width: 100%;
+  margin: 10px 0;
 }
 header .header_content .header_nav nav .sidebar li a {
   width: 100%;
@@ -66,24 +64,106 @@ header .header_content .header_nav nav .sidebar li a i {
 header .header_content .header_nav nav .sidebar li .active {
   color: #eb3e32 !important;
 }
+header .header_content .header_nav nav .sidebar .header_social i.fa-facebook-f {
+  font-size: 18px;
+  border-radius: 100%;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  color: white;
+  transition: all 0.3s;
+  cursor: pointer;
+  background-color: #3c5b9b;
+}
+header .header_content .header_nav nav .sidebar .header_social i.fa-facebook-f:hover {
+  background-color: white;
+  color: #eb3e32;
+}
+header .header_content .header_nav nav .sidebar .header_social i.fa-twitter {
+  font-size: 18px;
+  border-radius: 100%;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  color: white;
+  transition: all 0.3s;
+  cursor: pointer;
+  background-color: #1aaed9;
+}
+header .header_content .header_nav nav .sidebar .header_social i.fa-twitter:hover {
+  background-color: white;
+  color: #eb3e32;
+}
+header .header_content .header_nav nav .sidebar .header_social i.fa-pinterest {
+  font-size: 18px;
+  border-radius: 100%;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  color: white;
+  transition: all 0.3s;
+  cursor: pointer;
+  background-color: #3c5b9b;
+}
+header .header_content .header_nav nav .sidebar .header_social i.fa-pinterest:hover {
+  background-color: white;
+  color: #eb3e32;
+}
+header .header_content .header_nav nav .sidebar .header_social i.fa-google-plus-g {
+  font-size: 18px;
+  border-radius: 100%;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  color: white;
+  transition: all 0.3s;
+  cursor: pointer;
+  background-color: #eb3e32;
+}
+header .header_content .header_nav nav .sidebar .header_social i.fa-google-plus-g:hover {
+  background-color: white;
+  color: #eb3e32;
+}
+header .header_content .header_nav nav .sidebar .header_social i.fa-instagram {
+  font-size: 18px;
+  border-radius: 100%;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  color: white;
+  transition: all 0.3s;
+  cursor: pointer;
+  background-color: #8a7763;
+}
+header .header_content .header_nav nav .sidebar .header_social i.fa-instagram:hover {
+  background-color: white;
+  color: #eb3e32;
+}
+@media screen and (max-width: 767.98px) {
+  header .header_content .header_nav nav .sidebar {
+    width: 60%;
+  }
+}
 @media screen and (max-width: 575.98px) {
   header .header_content .header_nav nav .sidebar {
     width: 100%;
   }
 }
 header .header_content .header_nav nav .mainbar {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 30px 0;
 }
 header .header_content .header_nav nav .mainbar li {
-  position: relative;
   margin-left: 25px;
 }
 header .header_content .header_nav nav .mainbar li a {
-  position: relative;
   font-weight: bold;
   color: white;
   transition: all 0.3s;
@@ -118,9 +198,16 @@ footer {
   background-color: #26292e;
 }
 footer .footer_content {
-  padding-top: 50px;
+  padding: 50px;
 }
-footer .footer_content .footer_item_1 {
+footer .footer_content .footer_item {
+  color: white;
+}
+footer .footer_content .footer_item h3 {
+  padding-top: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
   color: white;
 }
 footer .footer_content .footer_item_1 a {
@@ -137,14 +224,15 @@ footer .footer_content .footer_item_1 i {
   margin-top: 20px;
 }
 footer .footer_content .footer_item_1 span {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 500;
 }
 footer .footer_content .footer_item_1 p {
+  color: #999;
   font-size: 14px;
   margin-top: 20px;
 }
-footer .footer_content .footer_item_1 .footer_social i {
+footer .footer_content .footer_item_1 .footer_social i.fa-facebook-f {
   font-size: 18px;
   border-radius: 100%;
   line-height: 40px;
@@ -154,23 +242,111 @@ footer .footer_content .footer_item_1 .footer_social i {
   color: white;
   transition: all 0.3s;
   cursor: pointer;
-}
-footer .footer_content .footer_item_1 .footer_social i.fa-facebook-f {
   background-color: #3c5b9b;
 }
-footer .footer_content .footer_item_1 .footer_social i.fa-twitter {
-  background-color: #1aaed9;
-}
-footer .footer_content .footer_item_1 .footer_social i.fa-pinterest {
-  background-color: #3c5b9b;
-}
-footer .footer_content .footer_item_1 .footer_social i.fa-google-plus-g {
-  background-color: #eb3e32;
-}
-footer .footer_content .footer_item_1 .footer_social i.fa-instagram {
-  background-color: #8a7763;
-}
-footer .footer_content .footer_item_1 .footer_social i:hover {
+footer .footer_content .footer_item_1 .footer_social i.fa-facebook-f:hover {
   background-color: white;
   color: #eb3e32;
+}
+footer .footer_content .footer_item_1 .footer_social i.fa-twitter {
+  font-size: 18px;
+  border-radius: 100%;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  color: white;
+  transition: all 0.3s;
+  cursor: pointer;
+  background-color: #1aaed9;
+}
+footer .footer_content .footer_item_1 .footer_social i.fa-twitter:hover {
+  background-color: white;
+  color: #eb3e32;
+}
+footer .footer_content .footer_item_1 .footer_social i.fa-pinterest {
+  font-size: 18px;
+  border-radius: 100%;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  color: white;
+  transition: all 0.3s;
+  cursor: pointer;
+  background-color: #3c5b9b;
+}
+footer .footer_content .footer_item_1 .footer_social i.fa-pinterest:hover {
+  background-color: white;
+  color: #eb3e32;
+}
+footer .footer_content .footer_item_1 .footer_social i.fa-google-plus-g {
+  font-size: 18px;
+  border-radius: 100%;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  color: white;
+  transition: all 0.3s;
+  cursor: pointer;
+  background-color: #eb3e32;
+}
+footer .footer_content .footer_item_1 .footer_social i.fa-google-plus-g:hover {
+  background-color: white;
+  color: #eb3e32;
+}
+footer .footer_content .footer_item_1 .footer_social i.fa-instagram {
+  font-size: 18px;
+  border-radius: 100%;
+  line-height: 40px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  color: white;
+  transition: all 0.3s;
+  cursor: pointer;
+  background-color: #8a7763;
+}
+footer .footer_content .footer_item_1 .footer_social i.fa-instagram:hover {
+  background-color: white;
+  color: #eb3e32;
+}
+footer .footer_content .footer_item_2 ul li {
+  padding: 5px 0;
+}
+footer .footer_content .footer_item_2 ul li a {
+  color: #999;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+footer .footer_content .footer_item_2 ul li a:hover {
+  color: #eb3e32;
+  padding-left: 7px;
+}
+footer .footer_content .footer_item_3 .footer_blog {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+footer .footer_content .footer_item_3 .footer_blog a img {
+  width: 100%;
+}
+footer .footer_content .footer_item_3 .footer_blog .footer_blog_text {
+  margin-left: 10px;
+}
+footer .footer_content .footer_item_3 .footer_blog .footer_blog_text h4 {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+footer .footer_content .footer_item_3 .footer_blog .footer_blog_text p {
+  color: #999;
+  font-size: 10px;
+}
+footer .footer_content .footer_item_4 p {
+  color: #999;
+  font-size: 12px;
+}
+footer .footer_content .footer_item_4 p span {
+  color: white;
 }/*# sourceMappingURL=style.css.map */

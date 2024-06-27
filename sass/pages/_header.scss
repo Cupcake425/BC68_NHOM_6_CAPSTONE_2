@@ -1,8 +1,6 @@
 header {
   background-color: $bg-color;
-  position: fixed;
-  top: 0;
-  left: 0;
+
   width: 100%;
   transition: all 0.5s;
   z-index: 998;
@@ -21,17 +19,17 @@ header {
           top: 0;
           right: 0;
           height: 100vh;
-          width: 30%;
+          width: 40%;
           z-index: 999;
           background-color: #26292e41;
           backdrop-filter: blur(10px);
           box-shadow: -10px 0 10px rbga(0, 0, 0, 0.1);
           display: none;
           flex-direction: column;
-          align-items: flex-start;
+          align-items: center;
           justify-content: flex-start;
           li {
-            width: 100%;
+            margin: 10px 0;
             a {
               width: 100%;
               font-weight: bold;
@@ -48,21 +46,40 @@ header {
               color: $main-color !important;
             }
           }
+          .header_social {
+            i {
+              &.fa-facebook-f {
+                @include social-icon(#3c5b9b);
+              }
+              &.fa-twitter {
+                @include social-icon(#1aaed9);
+              }
+              &.fa-pinterest {
+                @include social-icon(#3c5b9b);
+              }
+              &.fa-google-plus-g {
+                @include social-icon(#eb3e32);
+              }
+              &.fa-instagram {
+                @include social-icon(#8a7763);
+              }
+            }
+          }
+          @media screen and (max-width: 767.98px) {
+            width: 60%;
+          }
           @media screen and (max-width: 575.98px) {
             width: 100%;
           }
         }
         .mainbar {
-          position: relative;
           display: flex;
           align-items: center;
           justify-content: center;
           padding: 30px 0;
           li {
-            position: relative;
             margin-left: 25px;
             a {
-              position: relative;
               font-weight: bold;
               color: $second-color;
               transition: all 0.3s;
