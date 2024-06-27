@@ -21,7 +21,7 @@ header {
   left: 0;
   width: 100%;
   transition: all 0.5s;
-  z-index: 999;
+  z-index: 998;
 }
 header .header_content {
   display: flex;
@@ -32,28 +32,83 @@ header .header_content .header_logo {
   position: relative;
   padding: 25px 0;
 }
-header .header_content .header_nav ul {
+header .header_content .header_nav nav .sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 30%;
+  z-index: 999;
+  background-color: rgba(38, 41, 46, 0.2549019608);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rbga(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+header .header_content .header_nav nav .sidebar li {
+  width: 100%;
+}
+header .header_content .header_nav nav .sidebar li a {
+  width: 100%;
+  font-weight: bold;
+  color: white;
+  transition: all 0.3s;
+}
+header .header_content .header_nav nav .sidebar li a:hover {
+  color: #eb3e32;
+}
+header .header_content .header_nav nav .sidebar li a i {
+  font-size: 30px;
+}
+header .header_content .header_nav nav .sidebar li .active {
+  color: #eb3e32 !important;
+}
+@media screen and (max-width: 575.98px) {
+  header .header_content .header_nav nav .sidebar {
+    width: 100%;
+  }
+}
+header .header_content .header_nav nav .mainbar {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 30px 0;
 }
-header .header_content .header_nav ul li {
+header .header_content .header_nav nav .mainbar li {
   position: relative;
   margin-left: 25px;
 }
-header .header_content .header_nav ul li a {
+header .header_content .header_nav nav .mainbar li a {
   position: relative;
   font-weight: bold;
   color: white;
   transition: all 0.3s;
 }
-header .header_content .header_nav ul li a:hover {
+header .header_content .header_nav nav .mainbar li a:hover {
   color: #eb3e32;
 }
-header .header_content .header_nav ul li .active {
+header .header_content .header_nav nav .mainbar li a i {
+  font-size: 30px;
+}
+header .header_content .header_nav nav .mainbar li .active {
   color: #eb3e32 !important;
+}
+header .header_content .header_nav nav .mainbar li.btn-open-side-bar {
+  display: none;
+}
+@media screen and (max-width: 991.98px) {
+  header .header_content .header_nav nav .mainbar li.btn-open-side-bar {
+    display: block !important;
+  }
+}
+@media screen and (max-width: 991.98px) {
+  header .header_content .header_nav nav .mainbar li {
+    display: none;
+  }
 }
 header.sticky {
   background-color: #26292e;
