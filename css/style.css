@@ -408,4 +408,25 @@ footer .footer_content .footer_item_4 p span {
 }
 .product #product .product_info p:nth-child(3) {
   font-size: 20px;
+}
+
+.signup form {
+  margin: 0 auto;
+  max-width: 36rem;
+}
+.signup form .signup_content .signup_tile {
+  padding: 10px 0;
+}
+.signup form .signup_content .signup_button button {
+  background-color: #26292e;
+  border: none;
+  padding: 9px 21px;
+}
+.signup form .signup_content .signup_button button i {
+  font-size: 15px;
+  padding: 0 4px 0 0;
+}
+.signup form .signup_content .signup_button button:hover {
+  background-color: #eb3e32;
+  transition: all 0.7s;
 }/*# sourceMappingURL=style.css.map */
