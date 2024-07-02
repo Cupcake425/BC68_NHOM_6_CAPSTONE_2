@@ -417,10 +417,14 @@ footer .footer_content .footer_item_4 p span {
 .signup form .signup_content .signup_tile {
   padding: 10px 0;
 }
+.signup form .signup_content .signup_tile h2 {
+  font-weight: 800;
+}
 .signup form .signup_content .signup_button button {
   background-color: #26292e;
   border: none;
   padding: 9px 21px;
+  color: white;
 }
 .signup form .signup_content .signup_button button i {
   font-size: 15px;
@@ -429,4 +433,15 @@ footer .footer_content .footer_item_4 p span {
 .signup form .signup_content .signup_button button:hover {
   background-color: #eb3e32;
   transition: all 0.7s;
+}
+.signup form .signup_content .gender {
+  margin: 18px 0;
+  font-size: 20px;
+}
+.signup form .signup_content .gender .gender_title {
+  margin: 0 10px 0 0;
+  font-weight: 700;
+}
+.signup form .signup_content .gender .gender_male {
+  margin: 0 10px 0 0;
 }/*# sourceMappingURL=style.css.map */
