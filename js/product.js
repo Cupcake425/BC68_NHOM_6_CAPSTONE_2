@@ -1,14 +1,4 @@
-// Show Side bar
-function showSideBar() {
-  let sideBar = document.querySelector(".sidebar");
-  sideBar.style.display = "flex";
-}
-
-// giấu side bar
-function hideSideBar() {
-  let sideBar = document.querySelector(".sidebar");
-  sideBar.style.display = "none";
-}
+let arrGiay = [];
 
 // Lấy danh sách giày
 function layDanhSachGiay() {
@@ -30,23 +20,23 @@ layDanhSachGiay();
 function renderGiay(arr) {
   let content = "";
   arr.forEach((item) => {
-    console.log(item);
-    let { name, price, shortDescription, image } = item;
+    // console.log(item);
+    let { id, name, price, shortDescription, image } = item;
 
-    content += `<div class="col-12 col-md-6 col-lg-4">
-            <div class="product_item">
-            <img src="${image}" alt="" />
-            <div class="product_buynow">
-              <a href="">BUY NOW</a>
-            </div>
-             </div>
-            <div class="product_info">
-              <p>${name}</p>
-              <p>${shortDescription}</p>
-              <p>${price}$</p>
-            </div>
-            
-          </div>`;
+    content += `<div class="col-12 col-md-6 col-lg-4" onclick="layThongTinGiay('${id}')">
+              <div class="product_item">
+                <img src="${image}" alt="" />
+                <div class="product_buynow">
+                  <a href="">BUY NOW</a>
+                </div>
+              </div>
+              <div class="product_info">
+                <p>${name}</p>
+                <p>${shortDescription}</p>
+                <p>${price}$</p>
+              </div>
+              
+            </div>`;
   });
   document.getElementById("product").innerHTML = content;
 }
@@ -59,7 +49,7 @@ function layThongTinGiay(id) {
 
   let promise = axios({
     method: "GET",
-    url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${id}`,
+    url: `https://shop.cyberlearn.vn/api/Product/getbyi?id=${id}`,
   });
   promise
     .then((res) => {
@@ -94,5 +84,32 @@ function layThongTinGiay(id) {
     })
     .catch((err) => {
       console.log("Có lỗi xảy ra");
+      handleError("Tải dữ liệu thất bại");
     });
+}
+
+function tangSanPham() {
+  let getGiaTri = document.querySelector(".available_plus_minus").value * 1;
+  getGiaTri++;
+  document.querySelector(".available_plus_minus").value = getGiaTri;
+}
+function giamSanPham() {
+  let getGiaTri = document.querySelector(".available_plus_minus").value * 1;
+  if (getGiaTri > 0) getGiaTri--;
+  document.querySelector(".available_plus_minus").value = getGiaTri;
+}
+
+// Hiển thị thông báo lỗi cho người dùng
+function handleError(text, duration = 3000) {
+  Toastify({
+    // text giúp thông báo lỗi: sử dụng cơ chế từ object literal (ES6)
+    text,
+    // thời gian diễn ra thông báo
+    duration,
+    close: true,
+    gravity: "top", // `top` or `bottom`
+    position: "right", // `left`, `center` or `right`
+    stopOnFocus: true, // Prevents dismissing of toast on hover
+    className: "bg-danger text-white",
+  }).showToast();
 }

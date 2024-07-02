@@ -410,6 +410,90 @@ footer .footer_content .footer_item_4 p span {
   font-size: 20px;
 }
 
+.product_choose {
+  text-transform: capitalize;
+  margin-top: 100px;
+}
+.product_choose #product_choose_content .product_choose_item .product_choose_item_image img {
+  margin-right: 70px;
+}
+.product_choose #product_choose_content .product_choose_item .product_choose_item_info h2 {
+  font-size: 40px;
+  font-weight: 300;
+  line-height: 40.31px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.product_choose #product_choose_content .product_choose_item .product_choose_item_info p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 25.36px;
+  text-align: left;
+}
+.product_choose #product_choose_content .product_choose_item .product_choose_item_info .size_text {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29.05px;
+  text-align: left;
+  color: #1ed90e;
+}
+.product_choose #product_choose_content .product_choose_item .product_choose_item_info .product_size {
+  margin-top: 20px;
+}
+.product_choose #product_choose_content .product_choose_item .product_choose_item_info .product_size button {
+  font-size: 20px;
+  line-height: 20px;
+  background-color: rgba(204, 204, 204, 0.8);
+  color: black;
+  margin-right: 10px;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+.product_choose #product_choose_content .product_choose_item .product_choose_item_info .product_size button:focus {
+  background-color: red;
+  color: white;
+}
+.product_choose #product_choose_content .product_choose_item .product_choose_item_info .product_price {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 36.31px;
+  text-align: left;
+  color: #fc0303;
+}
+.product_choose #product_choose_content .product_choose_item .product_choose_item_info .available_plus_minus {
+  text-align: center;
+  width: 5%;
+  margin: 0 20px;
+  font-size: 25px;
+  font-weight: 800;
+  border: none;
+}
+.product_choose #product_choose_content .product_choose_item .product_choose_item_info .available_plus_minus:focus-visible {
+  outline: none;
+}
+.product_choose #product_choose_content .product_choose_item .product_choose_item_info .btn {
+  background-color: #6988f4;
+  padding: 15px 20px;
+  font-size: 20px;
+  line-height: 20px;
+  color: white;
+  transition: all 0.3s;
+}
+.product_choose #product_choose_content .product_choose_item .product_choose_item_info .btn:hover {
+  background-color: red;
+  color: white;
+}
+.product_choose #product_choose_content .product_choose_item .product_choose_item_info .btn.product_Add {
+  font-weight: 700;
+  margin-top: 10px;
+  background: linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #d017ee 89.71%);
+  transition: all 0.5s;
+}
+.product_choose #product_choose_content .product_choose_item .product_choose_item_info .btn.product_Add:hover {
+  color: #1ed90e;
+  background: linear-gradient(270deg, #d017ee 5.14%, rgba(62, 32, 248, 0.9) 89.71%);
+}
+
 .signup form {
   margin: 0 auto;
   max-width: 36rem;

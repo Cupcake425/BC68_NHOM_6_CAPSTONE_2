@@ -1,0 +1,102 @@
+.product_choose {
+  text-transform: capitalize;
+  margin-top: 100px;
+  #product_choose_content {
+    .product_choose_item {
+      .product_choose_item_image {
+        img {
+          margin-right: 70px;
+        }
+      }
+      .product_choose_item_info {
+        h2 {
+          font-size: 40px;
+          font-weight: 300;
+          line-height: 40.31px;
+          text-align: left;
+          margin-bottom: 20px;
+        }
+        p {
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 25.36px;
+          text-align: left;
+        }
+        .size_text {
+          font-size: 24px;
+          font-weight: 600;
+          line-height: 29.05px;
+          text-align: left;
+          color: #1ed90e;
+        }
+        .product_size {
+          margin-top: 20px;
+          button {
+            font-size: 20px;
+            line-height: 20px;
+            background-color: #cccc;
+            color: black;
+            margin-right: 10px;
+            font-weight: 700;
+            transition: all 0.3s;
+            &:focus {
+              background-color: red;
+              color: white;
+            }
+          }
+        }
+        .product_price {
+          font-size: 30px;
+          font-weight: 600;
+          line-height: 36.31px;
+          text-align: left;
+          color: #fc0303;
+        }
+        .available_plus_minus {
+          text-align: center;
+          width: 5%;
+          margin: 0 20px;
+          font-size: 25px;
+          font-weight: 800;
+          border: none;
+          &:focus-visible {
+            outline: none;
+          }
+        }
+
+        .btn {
+          background-color: #6988f4;
+          padding: 15px 20px;
+          font-size: 20px;
+          line-height: 20px;
+          color: white;
+          transition: all 0.3s;
+
+          &:hover {
+            background-color: red;
+            color: white;
+          }
+
+          &.product_Add {
+            font-weight: 700;
+            margin-top: 10px;
+            background: linear-gradient(
+              270deg,
+              rgba(62, 32, 248, 0.9) 5.14%,
+              #d017ee 89.71%
+            );
+            transition: all 0.5s;
+            &:hover {
+              color: #1ed90e;
+              background: linear-gradient(
+                270deg,
+                #d017ee 5.14%,
+                rgba(62, 32, 248, 0.9) 89.71%
+              );
+            }
+          }
+        }
+      }
+    }
+  }
+}
