@@ -105,46 +105,37 @@
              </div>
              <hr>
              <!-- input  -->
-              <div class="mb-3">
-                <label for="" class="form-label"></label>
-                <input
-                  type="text"
-                  class="form-control"
-                  name=""
-                  id="firstName"
-                  aria-describedby="helpId"
-                  placeholder="First Name"
-                />
-                <span  class="text-danger thongBaoLoi" id="firstName"></span>
-              </div>
 
 
-              <div class="mb-3">
-                <label for="" class="form-label"></label>
-                <input
-                  type="text"
-                  class="form-control"
-                  name=""
-                  id="lastName"
-                  aria-describedby="helpId"
-                  placeholder="Last Name"
-                />
-                <span class="text-danger thongBaoLoi" id="lastName"></span>
-              </div>
+             <div class="mb-3">
+              <label for="" class="form-label"></label>
+              <input
+                type="text"
+                class="form-control"
+                name=""
+                id="email"
+                aria-describedby="helpId"
+                placeholder="Email"
+              />
+              <span class="text-danger thongBaoLoi"  id="email"></span>
+            </div>
+            
 
 
-              <div class="mb-3">
-                <label for="" class="form-label"></label>
-                <input
-                  type="text"
-                  class="form-control"
-                  name=""
-                  id="Email"
-                  aria-describedby="helpId"
-                  placeholder="Email"
-                />
-                <span class="text-danger thongBaoLoi"  id="Email"></span>
-              </div>
+            <div class="mb-3">
+              <label for="" class="form-label"></label>
+              <input
+                type="text"
+                class="form-control"
+                name=""
+                id="password"
+                aria-describedby="helpId"
+                placeholder="Password"
+              />
+              <span class="text-danger thongBaoLoi"  id="password"></span>
+              
+            </div>
+
 
 
               <div class="mb-3">
@@ -153,34 +144,45 @@
                   type="text"
                   class="form-control"
                   name=""
-                  id="Password"
+                  id="name"
                   aria-describedby="helpId"
-                  placeholder="Password"
+                  placeholder="Name"
                 />
-                <span class="text-danger thongBaoLoi"  id="Password"></span>
-                
+                <span  class="text-danger thongBaoLoi" id="name"></span>
               </div>
+
 
 
               <div class="mb-3">
                 <label for="" class="form-label"></label>
-                <select
-                  class="form-select form-select-lg"
+                <input
+                  type="text"
+                  class="form-control"
                   name=""
-                  id="Sex"
-                >
-                  <option selected>Sex</option>
-                  <option value="Male">Male</option>
-                  <option value="
-                  Female">
-                  Female</option>
-                </select>
-                <span class="text-danger thongBaoLoi"  id="Sex"></span>
+                  id="phone"
+                  aria-describedby="helpId"
+                  placeholder="Phone"
+                />
+                <span class="text-danger thongBaoLoi" id="phone"></span>
               </div>
 
+
+              
+
+
+           
+
+              <div class="radio-group gender">
+                <label class="gender_title">Gender</label>
+                <input type="radio" id="gender" name="gender" value="true" checked>
+                <label for="male" class="gender_male">Male</label>
+                <input type="radio" id="gender" name="gender" value="true">
+                <label for="female" class="gender_female">Female</label>
+            </div>
+            
               <!-- button  -->
               <div class="signup_button">
-                <button class="btn btn-signUp mb-3 "
+                <button type="submit" class="btn btn-signUp mb-3 "
                  > <i class="fa fa-user left"></i>CREATE</button>
               </div>
             
@@ -302,6 +304,10 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+    <!-- axios cdn  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js" integrity="sha512-JSCFHhKDilTRRXe9ak/FJ28dcpOJxzQaCd3Xg8MyF6XFjODhy/YMCM8HW0TFDckNHWUewW+kfvhin43hKtJxAw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     <!-- toastify js  -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastify-js/1.6.1/toastify.js" integrity="sha512-MnKz2SbnWiXJ/e0lSfSzjaz9JjJXQNb2iykcZkEY2WOzgJIWVqJBFIIPidlCjak0iTH2bt2u1fHQ4pvKvBYy6Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- MAIN.JS -->
     <script src="./js/main.js"></script>
   </body>
