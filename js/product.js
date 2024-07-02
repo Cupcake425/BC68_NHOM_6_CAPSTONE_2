@@ -49,7 +49,7 @@ function layThongTinGiay(id) {
 
   let promise = axios({
     method: "GET",
-    url: `https://shop.cyberlearn.vn/api/Product/getbyi?id=${id}`,
+    url: `https://shop.cyberlearn.vn/api/Product/getbyid?id=${id}`,
   });
   promise
     .then((res) => {
