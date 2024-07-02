@@ -1,0 +1,35 @@
+.banner {
+  .banner_content {
+    #carouselExampleCaptions {
+      .carousel-indicators {
+        button {
+          &.active {
+            background-color: $main-color;
+          }
+        }
+      }
+      .carousel-inner {
+        .carousel-item {
+          img {
+            height: 1000px;
+          }
+          .carousel-caption {
+            top: 40%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            color: $second-color;
+            h5 {
+              font-size: 60px;
+              font-weight: bold;
+            }
+            p {
+              font-size: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.new {
+  background-image: url(../../image/banner/banner_3.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 700px;
+  margin-top: 50px;
+  .new_content {
+    padding: 200px 100px;
+    h2 {
+      color: #2f333a;
+      font-weight: bold;
+      margin-bottom: 10px !important;
+      font-size: 24px;
+    }
+    h1 {
+      font-weight: bolder;
+      color: #2f333a;
+      font-size: 60px;
+      line-height: 60px;
+      margin-bottom: 20px;
+    }
+  }
+}

@@ -15,6 +15,14 @@ ul {
   padding-left: 0 !important;
 }
 
+hr {
+  margin: 0 !important;
+}
+
+p {
+  margin-bottom: 0 !important;
+}
+
 header {
   background-color: #26292e;
   width: 100%;
@@ -429,4 +437,211 @@ footer .footer_content .footer_item_4 p span {
 .signup form .signup_content .signup_button button:hover {
   background-color: #eb3e32;
   transition: all 0.7s;
+}
+
+.search {
+  background-color: #26292e;
+  color: white;
+}
+.search .search_content {
+  padding: 10px 0;
+}
+.search .search_content .row {
+  align-items: center;
+}
+.search .search_content .row .search_call i {
+  color: #eb3e32;
+  font-size: 20px;
+  margin-right: 5px;
+}
+.search .search_content .row .search_call span {
+  font-size: 16px;
+  font-weight: 500;
+}
+.search .search_content .row .search_bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 0 10px;
+  height: 40px;
+  border-radius: 3px;
+}
+.search .search_content .row .search_bar input {
+  border: none;
+  outline: none;
+  width: 90%;
+}
+.search .search_content .row .search_bar i {
+  color: #26292e;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 20px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.search .search_content .row .search_bar i:hover {
+  color: white;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #eb3e32;
+}
+.search .search_content .row .search_register {
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+.search .search_content .row .search_register i {
+  font-size: 40px;
+  color: #eb3e32;
+}
+.search .search_content .row .search_register .search_sign_in {
+  margin-left: 20px;
+  text-align: center;
+}
+.search .search_content .row .search_register .search_sign_in a {
+  color: white;
+  transition: all 0.3s;
+}
+.search .search_content .row .search_register .search_sign_in a:hover {
+  color: #eb3e32;
+}
+
+.banner .banner_content #carouselExampleCaptions .carousel-indicators button.active {
+  background-color: #eb3e32;
+}
+.banner .banner_content #carouselExampleCaptions .carousel-inner .carousel-item img {
+  height: 1000px;
+}
+.banner .banner_content #carouselExampleCaptions .carousel-inner .carousel-item .carousel-caption {
+  top: 40%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: white;
+}
+.banner .banner_content #carouselExampleCaptions .carousel-inner .carousel-item .carousel-caption h5 {
+  font-size: 60px;
+  font-weight: bold;
+}
+.banner .banner_content #carouselExampleCaptions .carousel-inner .carousel-item .carousel-caption p {
+  font-size: 30px;
+}
+
+.new {
+  background-image: url(../../image/banner/banner_3.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 700px;
+  margin-top: 50px;
+}
+.new .new_content {
+  padding: 200px 100px;
+}
+.new .new_content h2 {
+  color: #2f333a;
+  font-weight: bold;
+  margin-bottom: 10px !important;
+  font-size: 24px;
+}
+.new .new_content h1 {
+  font-weight: bolder;
+  color: #2f333a;
+  font-size: 60px;
+  line-height: 60px;
+  margin-bottom: 20px;
+}
+
+.email {
+  background-image: url(../../image/banner/banner_4.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 500px;
+  margin: 50px 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.email .email_content {
+  text-align: center;
+}
+.email .email_content h1 {
+  font-weight: bolder;
+  font-size: 40px;
+}
+.email .email_content p {
+  margin-bottom: 20px !important;
+  color: #bbbbbb;
+}
+.email .email_content .email_sub {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 0 10px;
+  height: 40px;
+  border-radius: 3px;
+  width: 100%;
+}
+.email .email_content .email_sub input {
+  border: none;
+  outline: none;
+  width: 90%;
+}
+.email .email_content .email_sub i {
+  color: #26292e;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 20px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.email .email_content .email_sub i:hover {
+  color: white;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #eb3e32;
+}
+
+.insta .insta_content h1 {
+  text-align: center;
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+.insta .insta_content .insta_item {
+  position: relative;
+  padding-left: 0 !important;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.insta .insta_content .insta_item img {
+  width: 220px;
+  height: 200px;
+}
+.insta .insta_content .insta_item .insta_cover {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.insta .insta_content .insta_item:hover .insta_cover {
+  display: block;
 }/*# sourceMappingURL=style.css.map */
