@@ -1,0 +1,58 @@
+.email {
+  background-image: url(../../image/banner/banner_4.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 500px;
+  margin: 50px 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .email_content {
+    text-align: center;
+    h1 {
+      font-weight: bolder;
+      font-size: 40px;
+    }
+    p {
+      margin-bottom: 20px !important;
+      color: #bbbbbb;
+    }
+    .email_sub {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      padding: 0 10px;
+      height: 40px;
+      border-radius: 3px;
+      width: 100%;
+      input {
+        border: none;
+        outline: none;
+        width: 90%;
+      }
+      i {
+        color: $bg-color;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 50%;
+        font-size: 20px;
+        background-color: $second-color;
+        cursor: pointer;
+        transition: all 0.3s;
+        &:hover {
+          color: $second-color;
+          width: 30px;
+          height: 30px;
+          line-height: 30px;
+          text-align: center;
+          border-radius: 50%;
+          background-color: $main-color;
+        }
+      }
+    }
+  }
+}

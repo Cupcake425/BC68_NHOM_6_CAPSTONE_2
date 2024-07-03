@@ -8,6 +8,9 @@
             .signup_tile {
                 // text-align: center;
                 padding: 10px 0;
+                h2 {
+                    font-weight: 800;
+                }
             }
 
             .signup_button {
@@ -15,6 +18,7 @@
                     background-color: $bg-color;
                     border: none;
                     padding: 9px 21px;
+                    color: $second-color;
                     i {
                         font-size: 15px;
                         padding: 0 4px 0 0 ;
@@ -25,13 +29,20 @@
                     }
                 }
             }
+
+            .gender {
+                margin: 18px 0;
+                font-size: 20px;
+                .gender_title {
+                    margin: 0 10px 0 0;
+                    font-weight: 700;
+                }
+                .gender_male {
+                    margin: 0 10px 0 0;
+                }
+            }
         }
     }
 
 }
 
-// .signup_logo {
-//     text-align: center;
-//     color: $second-color;
-//     font-size: 24px;
-// }

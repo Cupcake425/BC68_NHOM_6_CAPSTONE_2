@@ -15,6 +15,14 @@ ul {
   padding-left: 0 !important;
 }
 
+hr {
+  margin: 0 !important;
+}
+
+p {
+  margin-bottom: 0 !important;
+}
+
 header {
   background-color: #26292e;
   width: 100%;
@@ -39,7 +47,7 @@ header .header_content .header_nav nav .sidebar {
   z-index: 999;
   background-color: rgba(38, 41, 46, 0.2549019608);
   -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   box-shadow: -10px 0 10px rbga(0, 0, 0, 0.1);
   display: none;
   flex-direction: column;
@@ -76,7 +84,13 @@ header .header_content .header_nav nav .sidebar .header_social i.fa-facebook-f {
   cursor: pointer;
   background-color: #3c5b9b;
 }
-header .header_content .header_nav nav .sidebar .header_social i.fa-facebook-f:hover {
+header
+  .header_content
+  .header_nav
+  nav
+  .sidebar
+  .header_social
+  i.fa-facebook-f:hover {
   background-color: white;
   color: #eb3e32;
 }
@@ -92,7 +106,13 @@ header .header_content .header_nav nav .sidebar .header_social i.fa-twitter {
   cursor: pointer;
   background-color: #1aaed9;
 }
-header .header_content .header_nav nav .sidebar .header_social i.fa-twitter:hover {
+header
+  .header_content
+  .header_nav
+  nav
+  .sidebar
+  .header_social
+  i.fa-twitter:hover {
   background-color: white;
   color: #eb3e32;
 }
@@ -108,11 +128,23 @@ header .header_content .header_nav nav .sidebar .header_social i.fa-pinterest {
   cursor: pointer;
   background-color: #3c5b9b;
 }
-header .header_content .header_nav nav .sidebar .header_social i.fa-pinterest:hover {
+header
+  .header_content
+  .header_nav
+  nav
+  .sidebar
+  .header_social
+  i.fa-pinterest:hover {
   background-color: white;
   color: #eb3e32;
 }
-header .header_content .header_nav nav .sidebar .header_social i.fa-google-plus-g {
+header
+  .header_content
+  .header_nav
+  nav
+  .sidebar
+  .header_social
+  i.fa-google-plus-g {
   font-size: 18px;
   border-radius: 100%;
   line-height: 40px;
@@ -124,7 +156,13 @@ header .header_content .header_nav nav .sidebar .header_social i.fa-google-plus-
   cursor: pointer;
   background-color: #eb3e32;
 }
-header .header_content .header_nav nav .sidebar .header_social i.fa-google-plus-g:hover {
+header
+  .header_content
+  .header_nav
+  nav
+  .sidebar
+  .header_social
+  i.fa-google-plus-g:hover {
   background-color: white;
   color: #eb3e32;
 }
@@ -140,7 +178,13 @@ header .header_content .header_nav nav .sidebar .header_social i.fa-instagram {
   cursor: pointer;
   background-color: #8a7763;
 }
-header .header_content .header_nav nav .sidebar .header_social i.fa-instagram:hover {
+header
+  .header_content
+  .header_nav
+  nav
+  .sidebar
+  .header_social
+  i.fa-instagram:hover {
   background-color: white;
   color: #eb3e32;
 }
@@ -365,7 +409,7 @@ footer .footer_content .footer_item_4 p span {
 .product #product .product_item img {
   width: 100%;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .product #product .product_item .product_buynow {
   background-color: #26292e;
@@ -414,33 +458,58 @@ footer .footer_content .footer_item_4 p span {
   text-transform: capitalize;
   margin-top: 100px;
 }
-.product_choose #product_choose_content .product_choose_item .product_choose_item_image img {
+.product_choose
+  #product_choose_content
+  .product_choose_item
+  .product_choose_item_image
+  img {
   margin-right: 70px;
 }
-.product_choose #product_choose_content .product_choose_item .product_choose_item_info h2 {
+.product_choose
+  #product_choose_content
+  .product_choose_item
+  .product_choose_item_info
+  h2 {
   font-size: 40px;
   font-weight: 300;
   line-height: 40.31px;
   text-align: left;
   margin-bottom: 20px;
 }
-.product_choose #product_choose_content .product_choose_item .product_choose_item_info p {
+.product_choose
+  #product_choose_content
+  .product_choose_item
+  .product_choose_item_info
+  p {
   font-size: 18px;
   font-weight: 500;
   line-height: 25.36px;
   text-align: left;
 }
-.product_choose #product_choose_content .product_choose_item .product_choose_item_info .size_text {
+.product_choose
+  #product_choose_content
+  .product_choose_item
+  .product_choose_item_info
+  .size_text {
   font-size: 24px;
   font-weight: 600;
   line-height: 29.05px;
   text-align: left;
   color: #1ed90e;
 }
-.product_choose #product_choose_content .product_choose_item .product_choose_item_info .product_size {
+.product_choose
+  #product_choose_content
+  .product_choose_item
+  .product_choose_item_info
+  .product_size {
   margin-top: 20px;
 }
-.product_choose #product_choose_content .product_choose_item .product_choose_item_info .product_size button {
+.product_choose
+  #product_choose_content
+  .product_choose_item
+  .product_choose_item_info
+  .product_size
+  button {
   font-size: 20px;
   line-height: 20px;
   background-color: rgba(204, 204, 204, 0.8);
@@ -449,18 +518,31 @@ footer .footer_content .footer_item_4 p span {
   font-weight: 700;
   transition: all 0.3s;
 }
-.product_choose #product_choose_content .product_choose_item .product_choose_item_info .product_size button:focus {
+.product_choose
+  #product_choose_content
+  .product_choose_item
+  .product_choose_item_info
+  .product_size
+  button:focus {
   background-color: red;
   color: white;
 }
-.product_choose #product_choose_content .product_choose_item .product_choose_item_info .product_price {
+.product_choose
+  #product_choose_content
+  .product_choose_item
+  .product_choose_item_info
+  .product_price {
   font-size: 30px;
   font-weight: 600;
   line-height: 36.31px;
   text-align: left;
   color: #fc0303;
 }
-.product_choose #product_choose_content .product_choose_item .product_choose_item_info .available_plus_minus {
+.product_choose
+  #product_choose_content
+  .product_choose_item
+  .product_choose_item_info
+  .available_plus_minus {
   text-align: center;
   width: 5%;
   margin: 0 20px;
@@ -468,10 +550,18 @@ footer .footer_content .footer_item_4 p span {
   font-weight: 800;
   border: none;
 }
-.product_choose #product_choose_content .product_choose_item .product_choose_item_info .available_plus_minus:focus-visible {
+.product_choose
+  #product_choose_content
+  .product_choose_item
+  .product_choose_item_info
+  .available_plus_minus:focus-visible {
   outline: none;
 }
-.product_choose #product_choose_content .product_choose_item .product_choose_item_info .btn {
+.product_choose
+  #product_choose_content
+  .product_choose_item
+  .product_choose_item_info
+  .btn {
   background-color: #6988f4;
   padding: 15px 20px;
   font-size: 20px;
@@ -479,19 +569,39 @@ footer .footer_content .footer_item_4 p span {
   color: white;
   transition: all 0.3s;
 }
-.product_choose #product_choose_content .product_choose_item .product_choose_item_info .btn:hover {
+.product_choose
+  #product_choose_content
+  .product_choose_item
+  .product_choose_item_info
+  .btn:hover {
   background-color: red;
   color: white;
 }
-.product_choose #product_choose_content .product_choose_item .product_choose_item_info .btn.product_Add {
+.product_choose
+  #product_choose_content
+  .product_choose_item
+  .product_choose_item_info
+  .btn.product_Add {
   font-weight: 700;
   margin-top: 10px;
-  background: linear-gradient(270deg, rgba(62, 32, 248, 0.9) 5.14%, #d017ee 89.71%);
+  background: linear-gradient(
+    270deg,
+    rgba(62, 32, 248, 0.9) 5.14%,
+    #d017ee 89.71%
+  );
   transition: all 0.5s;
 }
-.product_choose #product_choose_content .product_choose_item .product_choose_item_info .btn.product_Add:hover {
+.product_choose
+  #product_choose_content
+  .product_choose_item
+  .product_choose_item_info
+  .btn.product_Add:hover {
   color: #1ed90e;
-  background: linear-gradient(270deg, #d017ee 5.14%, rgba(62, 32, 248, 0.9) 89.71%);
+  background: linear-gradient(
+    270deg,
+    #d017ee 5.14%,
+    rgba(62, 32, 248, 0.9) 89.71%
+  );
 }
 
 .signup form {
@@ -501,10 +611,14 @@ footer .footer_content .footer_item_4 p span {
 .signup form .signup_content .signup_tile {
   padding: 10px 0;
 }
+.signup form .signup_content .signup_tile h2 {
+  font-weight: 800;
+}
 .signup form .signup_content .signup_button button {
   background-color: #26292e;
   border: none;
   padding: 9px 21px;
+  color: white;
 }
 .signup form .signup_content .signup_button button i {
   font-size: 15px;
@@ -513,4 +627,248 @@ footer .footer_content .footer_item_4 p span {
 .signup form .signup_content .signup_button button:hover {
   background-color: #eb3e32;
   transition: all 0.7s;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.search {
+  background-color: #26292e;
+  color: white;
+}
+.search .search_content {
+  padding: 10px 0;
+}
+.search .search_content .row {
+  align-items: center;
+}
+.search .search_content .row .search_call i {
+  color: #eb3e32;
+  font-size: 20px;
+  margin-right: 5px;
+}
+.search .search_content .row .search_call span {
+  font-size: 16px;
+  font-weight: 500;
+}
+.search .search_content .row .search_bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 0 10px;
+  height: 40px;
+  border-radius: 3px;
+}
+.search .search_content .row .search_bar input {
+  border: none;
+  outline: none;
+  width: 90%;
+}
+.search .search_content .row .search_bar i {
+  color: #26292e;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 20px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.search .search_content .row .search_bar i:hover {
+  color: white;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #eb3e32;
+}
+.search .search_content .row .search_register {
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+.search .search_content .row .search_register i {
+  font-size: 40px;
+  color: #eb3e32;
+}
+.search .search_content .row .search_register .search_sign_in {
+  margin-left: 20px;
+  text-align: center;
+}
+.search .search_content .row .search_register .search_sign_in a {
+  color: white;
+  transition: all 0.3s;
+}
+.search .search_content .row .search_register .search_sign_in a:hover {
+  color: #eb3e32;
+}
+
+.banner
+  .banner_content
+  #carouselExampleCaptions
+  .carousel-indicators
+  button.active {
+  background-color: #eb3e32;
+}
+.banner
+  .banner_content
+  #carouselExampleCaptions
+  .carousel-inner
+  .carousel-item
+  img {
+  height: 1000px;
+}
+.banner
+  .banner_content
+  #carouselExampleCaptions
+  .carousel-inner
+  .carousel-item
+  .carousel-caption {
+  top: 40%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: white;
+}
+.banner
+  .banner_content
+  #carouselExampleCaptions
+  .carousel-inner
+  .carousel-item
+  .carousel-caption
+  h5 {
+  font-size: 60px;
+  font-weight: bold;
+}
+.banner
+  .banner_content
+  #carouselExampleCaptions
+  .carousel-inner
+  .carousel-item
+  .carousel-caption
+  p {
+  font-size: 30px;
+}
+
+.new {
+  background-image: url(../../image/banner/banner_3.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 700px;
+  margin-top: 50px;
+}
+.new .new_content {
+  padding: 200px 100px;
+}
+.new .new_content h2 {
+  color: #2f333a;
+  font-weight: bold;
+  margin-bottom: 10px !important;
+  font-size: 24px;
+}
+.new .new_content h1 {
+  font-weight: bolder;
+  color: #2f333a;
+  font-size: 60px;
+  line-height: 60px;
+  margin-bottom: 20px;
+}
+
+.email {
+  background-image: url(../../image/banner/banner_4.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 500px;
+  margin: 50px 0;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.email .email_content {
+  text-align: center;
+}
+.email .email_content h1 {
+  font-weight: bolder;
+  font-size: 40px;
+}
+.email .email_content p {
+  margin-bottom: 20px !important;
+  color: #bbbbbb;
+}
+.email .email_content .email_sub {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 0 10px;
+  height: 40px;
+  border-radius: 3px;
+  width: 100%;
+}
+.email .email_content .email_sub input {
+  border: none;
+  outline: none;
+  width: 90%;
+}
+.email .email_content .email_sub i {
+  color: #26292e;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 20px;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.email .email_content .email_sub i:hover {
+  color: white;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #eb3e32;
+}
+
+.insta .insta_content h1 {
+  text-align: center;
+  font-weight: bolder;
+  margin-bottom: 20px;
+}
+.insta .insta_content .insta_item {
+  position: relative;
+  padding-left: 0 !important;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.insta .insta_content .insta_item img {
+  width: 220px;
+  height: 200px;
+}
+.insta .insta_content .insta_item .insta_cover {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.insta .insta_content .insta_item:hover .insta_cover {
+  display: block;
+  .signup form .signup_content .gender {
+    margin: 18px 0;
+    font-size: 20px;
+  }
+  .signup form .signup_content .gender .gender_title {
+    margin: 0 10px 0 0;
+    font-weight: 700;
+  }
+  .signup form .signup_content .gender .gender_male {
+    margin: 0 10px 0 0;
+  }
+}
