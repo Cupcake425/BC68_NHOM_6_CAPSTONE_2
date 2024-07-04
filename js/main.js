@@ -52,8 +52,7 @@ function renderGiay(arr) {
 }
 
 // Sign_in
-
-function hendleError(text, duration = 300000) {
+function handleError(text, duration = 3000) {
   Toastify({
     text,
     duration,
@@ -73,6 +72,8 @@ function Sign_up(event) {
     ".signup_form input, .signup_form select"
   );
   let user = {};
+  let hasError = false;
+  
   for (let field of arrField) {
     let { id, value, type, checked } = field;
     if (type === "radio") {
@@ -82,7 +83,34 @@ function Sign_up(event) {
     } else {
       user[id] = value;
     }
+    
+    let err = document.querySelector(`span.thongBaoLoi#${id}`);
+    console.log(err);
+    let checkEmpty = checkEmptyValue(value, err);
+    let checkValid = true;
+
+    if (checkEmpty) {
+      if (id === "email") {
+        checkValid = validateEmail(value, err);
+      } else if (id === "password") {
+        checkValid = validatePassword(value, err);
+      } else if (id === "name") {
+        checkValid = validateMinMax(value, err, 3, 30);
+      } else if (id === "phone") {
+        checkValid = validatePhone(value, err);
+      }
+    }
+
+    if (!checkEmpty || !checkValid) {
+      hasError = true;
+    }
   }
+  
+  if (hasError) {
+    handleError("Vui lòng kiểm tra lại các trường và làm theo đúng yêu cầu");
+    return;
+  }
+  
   console.log(user);
   let promise = axios({
     method: "POST",
@@ -93,12 +121,77 @@ function Sign_up(event) {
   promise
     .then(function (res) {
       console.log(res);
-      hendleError("Đăng ký tài khoản thành công!");
+      handleError("Đăng ký tài khoản thành công!");
     })
     .catch(function (error) {
       console.log(error);
-      hendleError(error.response.data.message);
+      handleError(error.response.data.message);
     });
 }
 
 document.querySelector(".signup_form").onsubmit = Sign_up;
+
+function checkEmptyValue(value, err) {
+  if (!value) {
+    if (err) err.innerHTML = "Vui lòng không để trống trường này";
+    return false;
+  } else {
+    if (err) err.innerHTML = "";
+    return true;
+  }
+}
+
+function validateMinMax(value, err, min, max) {
+  if (min <= value.length && value.length <= max) {
+    if (err) err.innerHTML = "";
+    return true;
+  } else {
+    if (err) err.innerHTML = `Vui lòng nhập dữ liệu từ ${min} đến ${max} ký tự`;
+    return false;
+  }
+}
+
+function validateEmail(value, err) {
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (emailPattern.test(value)) {
+    if (err) err.innerHTML = "";
+    return true;
+  } else {
+    if (err) err.innerHTML = "Email không đúng định dạng";
+    return false;
+  }
+}
+
+function validatePhone(value, err) {
+  const phonePattern = /^(0|\+84)[3|5|7|8|9][0-9]{8}$/;
+  if (phonePattern.test(value)) {
+    if (err) err.innerHTML = "";
+    return true;
+  } else {
+    if (err) err.innerHTML = "Số điện thoại không đúng định dạng";
+    return false;
+  }
+}
+
+function validatePassword(value, err) {
+  const specialCharPattern = /[!@#$%^&*(),.?":{}|<>]/;
+  if (specialCharPattern.test(value) && value.length >= 8) {
+    if (err) err.innerHTML = "";
+    return true;
+  } else {
+    if (err) err.innerHTML = "Mật khẩu phải có ít nhất 8 ký tự và bao gồm ít nhất 1 ký tự đặc biệt";
+    return false;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
