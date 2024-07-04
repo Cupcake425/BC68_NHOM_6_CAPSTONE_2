@@ -490,6 +490,13 @@ footer .footer_content .footer_item_4 p span {
   #product_choose_content
   .product_choose_item
   .product_choose_item_info
+  hr {
+  margin: 10px 0 !important;
+}
+.product_choose
+  #product_choose_content
+  .product_choose_item
+  .product_choose_item_info
   .size_text {
   font-size: 24px;
   font-weight: 600;
@@ -517,13 +524,14 @@ footer .footer_content .footer_item_4 p span {
   margin-right: 10px;
   font-weight: 700;
   transition: all 0.3s;
+  padding: 10px 20px;
 }
 .product_choose
   #product_choose_content
   .product_choose_item
   .product_choose_item_info
   .product_size
-  button:focus {
+  button:hover {
   background-color: red;
   color: white;
 }
@@ -531,7 +539,36 @@ footer .footer_content .footer_item_4 p span {
   #product_choose_content
   .product_choose_item
   .product_choose_item_info
+  .product_color_group
+  button {
+  margin-right: 10px;
+  width: 65px;
+  height: 50px;
+  transition: all 0s;
+  border: 3px solid white;
+}
+.product_choose
+  #product_choose_content
+  .product_choose_item
+  .product_choose_item_info
+  .product_color_group
+  button:hover {
+  border-color: transparent;
+}
+.product_choose
+  #product_choose_content
+  .product_choose_item
+  .product_choose_item_info
+  .product_color_group
+  .tooltip {
+  background-color: rebeccapurple;
+}
+.product_choose
+  #product_choose_content
+  .product_choose_item
+  .product_choose_item_info
   .product_price {
+  margin: 10px 0 !important;
   font-size: 30px;
   font-weight: 600;
   line-height: 36.31px;
@@ -561,7 +598,12 @@ footer .footer_content .footer_item_4 p span {
   #product_choose_content
   .product_choose_item
   .product_choose_item_info
-  .btn {
+  .product_choose_btn_plus,
+.product_choose
+  #product_choose_content
+  .product_choose_item
+  .product_choose_item_info
+  .product_choose_btn_minus {
   background-color: #6988f4;
   padding: 15px 20px;
   font-size: 20px;
@@ -573,7 +615,12 @@ footer .footer_content .footer_item_4 p span {
   #product_choose_content
   .product_choose_item
   .product_choose_item_info
-  .btn:hover {
+  .product_choose_btn_plus:hover,
+.product_choose
+  #product_choose_content
+  .product_choose_item
+  .product_choose_item_info
+  .product_choose_btn_minus:hover {
   background-color: red;
   color: white;
 }
@@ -581,27 +628,66 @@ footer .footer_content .footer_item_4 p span {
   #product_choose_content
   .product_choose_item
   .product_choose_item_info
-  .btn.product_Add {
-  font-weight: 700;
-  margin-top: 10px;
-  background: linear-gradient(
-    270deg,
-    rgba(62, 32, 248, 0.9) 5.14%,
-    #d017ee 89.71%
-  );
-  transition: all 0.5s;
+  .product_buy_group
+  .btn {
+  padding: 20px 45px;
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-right: 5px;
+  transition: all 0.3s;
 }
 .product_choose
   #product_choose_content
   .product_choose_item
   .product_choose_item_info
-  .btn.product_Add:hover {
-  color: #1ed90e;
-  background: linear-gradient(
-    270deg,
-    #d017ee 5.14%,
-    rgba(62, 32, 248, 0.9) 89.71%
-  );
+  .product_buy_group
+  .product_Cart {
+  background-color: red;
+  color: white;
+}
+.product_choose
+  #product_choose_content
+  .product_choose_item
+  .product_choose_item_info
+  .product_buy_group
+  .product_Cart:hover {
+  background-color: black;
+}
+.product_choose
+  #product_choose_content
+  .product_choose_item
+  .product_choose_item_info
+  .product_buy_group
+  .product_Wish {
+  background-color: white;
+  color: black;
+}
+.product_choose
+  #product_choose_content
+  .product_choose_item
+  .product_choose_item_info
+  .product_buy_group
+  .product_Wish:hover {
+  background-color: black;
+  color: white;
+}
+.product_choose
+  #product_choose_content
+  .product_choose_item
+  .product_choose_item_info
+  .product_buy_group
+  .product_Buy {
+  background-color: black;
+  color: white;
+}
+.product_choose
+  #product_choose_content
+  .product_choose_item
+  .product_choose_item_info
+  .product_buy_group
+  .product_Buy:hover {
+  background-color: red;
 }
 
 .signup form {
@@ -627,6 +713,17 @@ footer .footer_content .footer_item_4 p span {
 .signup form .signup_content .signup_button button:hover {
   background-color: #eb3e32;
   transition: all 0.7s;
+}
+.signup form .signup_content .gender {
+  margin: 18px 0;
+  font-size: 20px;
+}
+.signup form .signup_content .gender .gender_title {
+  margin: 0 10px 0 0;
+  font-weight: 700;
+}
+.signup form .signup_content .gender .gender_male {
+  margin: 0 10px 0 0;
 }
 
 .search {
@@ -860,15 +957,4 @@ footer .footer_content .footer_item_4 p span {
 }
 .insta .insta_content .insta_item:hover .insta_cover {
   display: block;
-  .signup form .signup_content .gender {
-    margin: 18px 0;
-    font-size: 20px;
-  }
-  .signup form .signup_content .gender .gender_title {
-    margin: 0 10px 0 0;
-    font-weight: 700;
-  }
-  .signup form .signup_content .gender .gender_male {
-    margin: 0 10px 0 0;
-  }
-}
+} /*# sourceMappingURL=style.css.map */
