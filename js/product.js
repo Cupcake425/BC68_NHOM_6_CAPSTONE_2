@@ -1,7 +1,7 @@
 window.onload = function () {
   const urlParam = new URLSearchParams(window.location.search);
   const myParam = urlParam.get("productid");
-  layThongTinGiay(myParam);
+  layThongTinGiay(myParam, "Chọn sản phẩm để hiện lên");
 };
 
 // Lấy danh sách giày
@@ -48,7 +48,7 @@ function renderGiay(arr) {
 
 //Chức năng lấy thông tin giày
 
-function layThongTinGiay(id) {
+function layThongTinGiay(id, errorText = "Tải dữ liệu thất bại") {
   console.log(id);
   let content = "";
 
@@ -65,7 +65,7 @@ function layThongTinGiay(id) {
         sizeValue += `<button class="btn">${size}</button>`;
       }
       console.log(res);
-      content += `<div class="product_choose_item d-flex">
+      content += `<div class="product_choose_item ">
                     <div class="product_choose_item_image">
                       <img src="${giay.image}" alt="" />
                     </div>
@@ -92,7 +92,7 @@ function layThongTinGiay(id) {
 
                       <button onclick="giamSanPham()" class="btn product_choose_btn_minus">-</button>
                       <br>
-                      <div class="product_buy_group my-3">
+                      <div class="product_buy_group ">
                       
                       <button type="button" class="btn  product_Cart" data-bs-toggle="tooltip" data-bs-placement="top" title="Add To Cart">
                       Add To Cart
@@ -111,7 +111,7 @@ function layThongTinGiay(id) {
     })
     .catch((err) => {
       console.log("Có lỗi xảy ra");
-      handleError("Tải dữ liệu thất bại");
+      handleError(errorText);
     });
 }
 
