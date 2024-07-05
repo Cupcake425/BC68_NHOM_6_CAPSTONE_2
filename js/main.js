@@ -32,13 +32,11 @@ function renderGiay(arr) {
   arr.forEach((item) => {
     console.log(item);
     let { id, name, price, shortDescription, image } = item;
-    let { id, name, price, shortDescription, image } = item;
 
     content += `<div class="col-12 col-md-6 col-lg-4">
             <div class="product_item">
             <img src="${image}" alt="" />
             <div class="product_buynow">
-                <a href="">BUY NOW</a>
               <a href="./Product.html?productid=${id}">BUY NOW</a>
             </div>
              </div>

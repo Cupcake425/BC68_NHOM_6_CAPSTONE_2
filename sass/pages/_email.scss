@@ -1,6 +1,7 @@
 .email {
   background-image: url(../../image/banner/banner_4.png);
   background-size: contain;
+  background-position: center;
   background-repeat: no-repeat;
   height: 500px;
   margin: 50px 0;
@@ -13,10 +14,36 @@
     h1 {
       font-weight: bolder;
       font-size: 40px;
+      @media screen and (max-width: 1199.98px) {
+        font-size: 35px;
+      }
+
+      @media screen and (max-width: 991.98px) {
+        font-size: 30px;
+      }
+      @media screen and (max-width: 767.98px) {
+        font-size: 25px;
+      }
+      @media screen and (max-width: 575.98px) {
+        font-size: 20px;
+      }
     }
     p {
       margin-bottom: 20px !important;
       color: #bbbbbb;
+      font-size: 16px;
+      @media screen and (max-width: 1199.98px) {
+        font-size: 14px;
+      }
+      @media screen and (max-width: 991.98px) {
+        font-size: 12px;
+      }
+      @media screen and (max-width: 767.98px) {
+        font-size: 10px;
+      }
+      @media screen and (max-width: 575.98px) {
+        font-size: 8px;
+      }
     }
     .email_sub {
       display: flex;

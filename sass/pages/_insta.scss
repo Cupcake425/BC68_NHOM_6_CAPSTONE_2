@@ -13,6 +13,22 @@
       img {
         width: 220px;
         height: 200px;
+        @media screen and (max-width: 1399.98px) {
+          width: 285px;
+          height: 250px;
+        }
+        @media screen and (max-width: 1199.98px) {
+          width: 320px;
+          height: 340px;
+        }
+        @media screen and (max-width: 991.98px) {
+          width: 360px;
+          height: 360px;
+        }
+        @media screen and (max-width: 767.98px) {
+          width: 540px;
+          height: 400px;
+        }
       }
       .insta_cover {
         display: none;

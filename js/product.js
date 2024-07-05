@@ -12,7 +12,7 @@ function layDanhSachGiay() {
   });
   promise
     .then((res) => {
-      renderGiay(res.data.content);
+      renderGiay(res.data.content.slice(0, 3));
     })
     .catch((err) => {
       console.log("Có lỗi xảy ra");
@@ -28,11 +28,11 @@ function renderGiay(arr) {
     // console.log(item);
     let { id, name, price, shortDescription, image } = item;
 
-    content += `<div class="col-12 col-md-6 col-lg-4" onclick="layThongTinGiay('${id}')">
+    content += `<div class="col-12 col-md-6 col-lg-4" >
               <div class="product_item">
                 <img src="${image}" alt="" />
                 <div class="product_buynow">
-                  <a href="">BUY NOW</a>
+                   <a href="./Product.html?productid=${id}">BUY NOW</a>
                 </div>
               </div>
               <div class="product_info">
@@ -139,4 +139,16 @@ function handleError(text, duration = 3000) {
     stopOnFocus: true, // Prevents dismissing of toast on hover
     className: "bg-danger text-white",
   }).showToast();
+}
+
+// Show Side bar
+function showSideBar() {
+  let sideBar = document.querySelector(".sidebar");
+  sideBar.style.display = "flex";
+}
+
+// giấu side bar
+function hideSideBar() {
+  let sideBar = document.querySelector(".sidebar");
+  sideBar.style.display = "none";
 }
