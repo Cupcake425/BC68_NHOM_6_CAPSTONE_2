@@ -1,4 +1,8 @@
-let arrGiay = [];
+window.onload = function () {
+  const urlParam = new URLSearchParams(window.location.search);
+  const myParam = urlParam.get("productid");
+  layThongTinGiay(myParam, "Chọn sản phẩm để hiện lên");
+};
 
 // Lấy danh sách giày
 function layDanhSachGiay() {
@@ -12,6 +16,7 @@ function layDanhSachGiay() {
     })
     .catch((err) => {
       console.log("Có lỗi xảy ra");
+      handleError("Tải dữ liệu thất bại");
     });
 }
 layDanhSachGiay();
@@ -43,7 +48,7 @@ function renderGiay(arr) {
 
 //Chức năng lấy thông tin giày
 
-function layThongTinGiay(id) {
+function layThongTinGiay(id, errorText = "Tải dữ liệu thất bại") {
   console.log(id);
   let content = "";
 
@@ -60,7 +65,7 @@ function layThongTinGiay(id) {
         sizeValue += `<button class="btn">${size}</button>`;
       }
       console.log(res);
-      content += `<div class="product_choose_item d-flex">
+      content += `<div class="product_choose_item ">
                     <div class="product_choose_item_image">
                       <img src="${giay.image}" alt="" />
                     </div>
@@ -70,13 +75,35 @@ function layThongTinGiay(id) {
                       <hr>
                       <span class="size_text">Available Size</span>
                       <p class="product_size">${sizeValue}</p>
+                      <div class="product_color_group my-4 ">
+                      <button type="button" class="btn btn-danger bg-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="Red">
+                      
+                      </button>
+                      <button type="button" class="btn btn-primary bg-primary" data-bs-toggle="tooltip" data-bs-placement="top" title="Blue">
+                      </button>
+                      <button type="button" class="btn btn-success bg-success" data-bs-toggle="tooltip" data-bs-placement="top" title="Green">
+                      </button>
+                      <button type="button" class="btn btn-dark bg-dark" data-bs-toggle="tooltip" data-bs-placement="top" title="Black">
+                      </button>
+                      </div>
                       <p class="product_price">${giay.price}$</p>
                       <button onclick="tangSanPham()" class="btn  product_choose_btn_plus">+</button>
                       <input value=0 type="text" class="available_plus_minus">
 
                       <button onclick="giamSanPham()" class="btn product_choose_btn_minus">-</button>
                       <br>
-                      <button class="btn product_Add">Add To Cart</button>
+                      <div class="product_buy_group ">
+                      
+                      <button type="button" class="btn  product_Cart" data-bs-toggle="tooltip" data-bs-placement="top" title="Add To Cart">
+                      Add To Cart
+                      </button>
+                      <button type="button" class="btn btn-secondary product_Wish" data-bs-toggle="tooltip" data-bs-placement="top" title="Add To Wish List">
+                      Add To Wish List
+                      </button>
+                      <button type="button" class="btn  product_Buy" data-bs-toggle="tooltip" data-bs-placement="top" title="Buy It Now">
+                      Buy It Now
+                      </button>
+                      </div>
                     </div>
                     
                   </div>`;
@@ -84,7 +111,7 @@ function layThongTinGiay(id) {
     })
     .catch((err) => {
       console.log("Có lỗi xảy ra");
-      handleError("Tải dữ liệu thất bại");
+      handleError(errorText);
     });
 }
 
