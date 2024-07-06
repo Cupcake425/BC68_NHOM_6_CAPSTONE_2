@@ -30,7 +30,6 @@ layDanhSachGiay();
 function renderGiay(arr) {
   let content = "";
   arr.forEach((item) => {
-    console.log(item);
     let { id, name, price, shortDescription, image } = item;
 
     content += `<div class="col-12 col-md-6 col-lg-4">
@@ -56,13 +55,12 @@ function handleError(text, duration = 3000) {
   Toastify({
     text,
     duration,
+    destination: "https://github.com/apvarun/toastify-js",
+    newWindow: true,
     close: true,
     gravity: "top", // `top` or `bottom`
-    position: "left", // `left`, `center` or `right`
+    position: "right", // `left`, `center` or `right`
     stopOnFocus: true, // Prevents dismissing of toast on hover
-    style: {
-      background: "linear-gradient(to right, #00b09b, #96c93d)",
-    },
   }).showToast();
 }
 
@@ -120,7 +118,7 @@ function Sign_up(event) {
 
   promise
     .then(function (res) {
-      console.log(res);
+      document.querySelector(".signup_form").reset();
       handleError("Đăng ký tài khoản thành công!");
     })
     .catch(function (error) {

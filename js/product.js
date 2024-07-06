@@ -10,6 +10,7 @@ function layDanhSachGiay() {
     method: "GET",
     url: "https://shop.cyberlearn.vn/api/Product",
   });
+
   promise
     .then((res) => {
       renderGiay(res.data.content.slice(0, 3));
