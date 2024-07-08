@@ -112,7 +112,7 @@ function Sign_up(event) {
   }
 
   if (hasError) {
-    handleError("Vui lòng kiểm tra lại các trường và làm theo đúng yêu cầu");
+    handleError("Vui lòng kiểm tra và làm theo yêu cầu !");
     return;
   }
 
@@ -151,7 +151,7 @@ function validateMinMax(value, err, min, max) {
     if (err) err.innerHTML = "";
     return true;
   } else {
-    if (err) err.innerHTML = `Vui lòng nhập dữ liệu từ ${min} đến ${max} ký tự`;
+    if (err) err.innerHTML = `Vui lòng nhập từ ${min} đến ${max} ký tự`;
     return false;
   }
 }
@@ -162,7 +162,7 @@ function validateEmail(value, err) {
     if (err) err.innerHTML = "";
     return true;
   } else {
-    if (err) err.innerHTML = "Email không đúng định dạng";
+    if (err) err.innerHTML = "Email của bạn không đúng định dạng";
     return false;
   }
 }
@@ -173,7 +173,7 @@ function validatePhone(value, err) {
     if (err) err.innerHTML = "";
     return true;
   } else {
-    if (err) err.innerHTML = "Số điện thoại không đúng định dạng";
+    if (err) err.innerHTML = "Số điện thoại của bạn không đúng định dạng";
     return false;
   }
 }
@@ -186,7 +186,7 @@ function validatePassword(value, err) {
   } else {
     if (err)
       err.innerHTML =
-        "Mật khẩu phải có ít nhất 8 ký tự và bao gồm ít nhất 1 ký tự đặc biệt";
+        "Mật khẩu của bạn ít nhất phải có 1 ký tự đặc biệt";
     return false;
   }
 }
@@ -195,7 +195,7 @@ function validateConfirmPassword(value, password, err) {
     if (err) err.innerHTML = "";
     return true;
   } else {
-    if (err) err.innerHTML = "Mật khẩu xác nhận không khớp";
+    if (err) err.innerHTML = "Mật khẩu của bạn không trùng khớp";
     return false;
   }
 }
