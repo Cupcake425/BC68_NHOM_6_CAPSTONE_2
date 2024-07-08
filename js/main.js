@@ -92,7 +92,14 @@ function Sign_up(event) {
         checkValid = validateEmail(value, err);
       } else if (id === "password") {
         checkValid = validatePassword(value, err);
-      } else if (id === "name") {
+      }else if (id === "confirmPassword") {
+        checkValid = validateConfirmPassword(
+          value,
+          document.querySelector("#password").value,
+          err
+        );
+      }
+       else if (id === "name") {
         checkValid = validateMinMax(value, err, 3, 30);
       } else if (id === "phone") {
         checkValid = validatePhone(value, err);
@@ -180,6 +187,15 @@ function validatePassword(value, err) {
     if (err)
       err.innerHTML =
         "Mật khẩu phải có ít nhất 8 ký tự và bao gồm ít nhất 1 ký tự đặc biệt";
+    return false;
+  }
+}
+function validateConfirmPassword(value, password, err) {
+  if (value === password) {
+    if (err) err.innerHTML = "";
+    return true;
+  } else {
+    if (err) err.innerHTML = "Mật khẩu xác nhận không khớp";
     return false;
   }
 }
