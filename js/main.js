@@ -55,12 +55,11 @@ function handleError(text, duration = 3000) {
   Toastify({
     text,
     duration,
-    destination: "https://github.com/apvarun/toastify-js",
-    newWindow: true,
     close: true,
     gravity: "top", // `top` or `bottom`
-    position: "right", // `left`, `center` or `right`
+    position: "left", // `left`, `center` or `right`
     stopOnFocus: true, // Prevents dismissing of toast on hover
+    className: "bg-success text-white",
   }).showToast();
 }
 
@@ -100,7 +99,7 @@ function Sign_up(event) {
         );
       }
        else if (id === "name") {
-        checkValid = validateMinMax(value, err, 3, 30);
+        checkValid = validateMinMax(value, err, 3, 10);
       } else if (id === "phone") {
         checkValid = validatePhone(value, err);
       }
@@ -112,7 +111,7 @@ function Sign_up(event) {
   }
 
   if (hasError) {
-    handleError("Vui lòng kiểm tra và làm theo yêu cầu !");
+    // handleError("Please check again and do as requested!");
     return;
   }
 
@@ -126,7 +125,7 @@ function Sign_up(event) {
   promise
     .then(function (res) {
       document.querySelector(".signup_form").reset();
-      handleError("Đăng ký tài khoản thành công!");
+      handleError("Account registration successful!");
     })
     .catch(function (error) {
       console.log(error);
@@ -138,7 +137,7 @@ document.querySelector(".signup_form").onsubmit = Sign_up;
 
 function checkEmptyValue(value, err) {
   if (!value) {
-    if (err) err.innerHTML = "Vui lòng không để trống trường này";
+    if (err) err.innerHTML = "Please do not leave this field blank ";
     return false;
   } else {
     if (err) err.innerHTML = "";
@@ -151,8 +150,9 @@ function validateMinMax(value, err, min, max) {
     if (err) err.innerHTML = "";
     return true;
   } else {
-    if (err) err.innerHTML = `Vui lòng nhập từ ${min} đến ${max} ký tự`;
-    return false;
+    if (err) err.innerHTML = `
+            Please enter ${min} to ${max} characters`;
+    return false; 
   }
 }
 
@@ -162,7 +162,7 @@ function validateEmail(value, err) {
     if (err) err.innerHTML = "";
     return true;
   } else {
-    if (err) err.innerHTML = "Email của bạn không đúng định dạng";
+    if (err) err.innerHTML = "Your email is not in the correct format";
     return false;
   }
 }
@@ -173,7 +173,7 @@ function validatePhone(value, err) {
     if (err) err.innerHTML = "";
     return true;
   } else {
-    if (err) err.innerHTML = "Số điện thoại của bạn không đúng định dạng";
+    if (err) err.innerHTML = "Your phone number is not in the correct format";
     return false;
   }
 }
@@ -186,7 +186,7 @@ function validatePassword(value, err) {
   } else {
     if (err)
       err.innerHTML =
-        "Mật khẩu của bạn ít nhất phải có 1 ký tự đặc biệt";
+        "Your password must have at least 1 special character";
     return false;
   }
 }
@@ -195,7 +195,7 @@ function validateConfirmPassword(value, password, err) {
     if (err) err.innerHTML = "";
     return true;
   } else {
-    if (err) err.innerHTML = "Mật khẩu của bạn không trùng khớp";
+    if (err) err.innerHTML = "Your passwords do not match";
     return false;
   }
 }
