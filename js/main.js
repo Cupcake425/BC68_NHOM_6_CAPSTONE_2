@@ -50,7 +50,7 @@ function renderGiay(arr) {
   document.getElementById("product").innerHTML = content;
 }
 
-// Sign_in
+// Sign_up
 function handleError(text, duration = 3000) {
   Toastify({
     text,
@@ -91,14 +91,13 @@ function Sign_up(event) {
         checkValid = validateEmail(value, err);
       } else if (id === "password") {
         checkValid = validatePassword(value, err);
-      }else if (id === "confirmPassword") {
+      } else if (id === "confirmPassword") {
         checkValid = validateConfirmPassword(
           value,
           document.querySelector("#password").value,
           err
         );
-      }
-       else if (id === "name") {
+      } else if (id === "name") {
         checkValid = validateMinMax(value, err, 3, 10);
       } else if (id === "phone") {
         checkValid = validatePhone(value, err);
@@ -111,11 +110,9 @@ function Sign_up(event) {
   }
 
   if (hasError) {
-    // handleError("Please check again and do as requested!");
     return;
   }
 
-  console.log(user);
   let promise = axios({
     method: "POST",
     url: "https://shop.cyberlearn.vn/api/Users/signup",
@@ -150,9 +147,10 @@ function validateMinMax(value, err, min, max) {
     if (err) err.innerHTML = "";
     return true;
   } else {
-    if (err) err.innerHTML = `
+    if (err)
+      err.innerHTML = `
             Please enter ${min} to ${max} characters`;
-    return false; 
+    return false;
   }
 }
 
@@ -185,8 +183,7 @@ function validatePassword(value, err) {
     return true;
   } else {
     if (err)
-      err.innerHTML =
-        "Your password must have at least 1 special character";
+      err.innerHTML = "Your password must have at least 1 special character";
     return false;
   }
 }
